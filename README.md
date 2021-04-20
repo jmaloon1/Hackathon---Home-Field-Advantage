@@ -4,7 +4,7 @@
      alt="Sold out Stadium" width="180" height="120">
      
 UC Davis has partnered with Google for AggieHacks 2021, a competition focused around the analyzing the impacts of COVID-19. 
-We have focused on trying to discern the impact COVID has had on sports because of fans being limited at games and when sports teams should fully reopen their stadiums based on vaccination rates throughout the country.
+We focused on discerning the impact COVID has had on sports because of fans being limited at games and when sports teams should fully reopen their stadiums based on vaccination rates throughout the country.
 
 ## What is in the Repo
 
