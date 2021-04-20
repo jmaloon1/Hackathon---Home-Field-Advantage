@@ -30,7 +30,20 @@ Data for COVID vaccinations was pulled from https://github.com/owid/covid-19-dat
 The file Hackathon.ipynb (same one where data was collected) is where the statistical tests were done for sports team performance. These statistical tests checked whether teams were fairing worse at their home venues during COVID in part due to the lack of fans. The data was saved in our repo to a file called csvData.csv.
 
 ### COVID Vaccination Predictions
-A python script called vaccination_prediction.ipynb used ARIMA to genrate predictions on COVID vaccinations for several states. We focused on states with NBA teams as the NBA was the focus of our project. An interactive dashboard built in Google Data Studio can be found here: https://datastudio.google.com/s/rWABKN05Wng
+A python script called vaccination_prediction.ipynb used ARIMA to generate predictions on COVID vaccinations for several states. We focused on states with NBA teams as the NBA was the focus of our project. An interactive dashboard built in Google Data Studio can be found here: https://datastudio.google.com/s/rWABKN05Wng
 
 ## Reports
-A Tableau file called Hackathon_Viz.twb contains several vizualizations for different sports and their performaces pre and during COVID. This program uses sports_data.csv as its data source.
+A Tableau file called Hackathon_Viz.twb contains several visualizations for different sports and their performances pre and during COVID. This program uses sports_data.csv as its data source.
+
+### Usage
+To get the most out of this repo, there are two routes: Follow the path we did in collecting the data and evaluating it or using the complete dataset (sports_data.csv) to evaluate to look for new interesting findings.
+
+1. Following the path we took - The path we took started with evaluating a problem stemming COVID-19. We decided that seeing how sports teams have fared at their home venues during COVID would be a really interesting problem as it is a potentially once-in-a-lifetime natural experiment. Our next task was to decide what exact problems we hoped to answer with data analytics. We settled on:
+
+* How has the lack of attendance brought on by COVID affected home team performance?
+* When is the right time for teams to fully reopen their venues?
+
+Focusing on these two problems ties in our attempt as a country to get back to normal but not to do it in a unnecessarily risky fashion. We then looked for places to get data. For the vaccination data, there are plenty of sources and we used a Github Repo (linked above) that pulled data from the CDC. The sports data was a little trickier to get but using a combination of API's (in Hackathon.ipynb) and data directly from sports-referene.com, we obtained a usable dataset. With this dataset for sports, the next step was to use Tableau (Hackathon_Viz.twb) to learn how COVID has affected sports team performance. We saw that baseball was the only sport where teams actually did better at home with limited fans. Soccer had the biggest drop-off in performance and the other sports we analyzed (baseball, basketball, hockey, american football) all also saw drop-offs as was to be expected. We then settled on basketball as the NBA season is winding down and teams are trying to reopen their venues. To validate our findings with statistical analysis, we used the same Python script (Hackathon.ipynb) to find the statistical difference in sports league performance before and during COVID. 
+For finding when it would be safe for teams to reopen their stadiums, we used the NBA again as our focus and used vaccination data (csvData.csv) to predict when different states would reach herd immunity. We settled on a 60% vaccination rate as along with people being naturally immune, it would fall in line CDC estimates for herd immunity. Using the ARIMA technique in the Python script (vaccination_prediction.ipynb), we made predictions for the states with NBA teams. We then used Google Data Studio to make some visualizations with these findings.
+
+2. Look for new and interesting findings - For those that want to do some exploration on this topic, the dataset we collected (sports_data.csv) is fairly comprehensive with years of data from major sports. Using visualization tools like Tableau is a great way to make new findings.
