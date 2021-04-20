@@ -4,7 +4,7 @@
      alt="Sold out Stadium" width="180" height="120">
      
 UC Davis has partnered with Google for AggieHacks 2021, a competition focused around the analyzing the impacts of COVID-19. 
-We have focused on trying to discern the impact COVID has had on sports because of fans being limited at games and also when it is safe to go back to sporting events.
+We have focused on trying to discern the impact COVID has had on sports because of fans being limited at games and when sports teams should fully reopen their stadiums based on vaccination rates throughout the country.
 
 ## What is in the Repo
 
@@ -16,11 +16,10 @@ We have focused on trying to discern the impact COVID has had on sports because 
 
 ## Data Collection Tools
 
-This Repo is split into to main parts - sports attendance and COVID vaccination predictions. 
+This Repo is split into 2 main parts - sports attendance and COVID vaccination predictions. 
 
 ### Sports Attendance, 
-Data was used from sports-reference.com. It was obtained in several different ways. For hockey and soccer, data was taken directly from the website and cleaned in excel. For baseball and basketball, two different API's in python were used to gather the relevant data. Both of these API's leverage sports-reference.com, however note that the API for basketball only had average attendance for a given season, so generalizations were made to take the season averages to the individual game level (in our final dataset, for the 2020-2021 NBA season, we manually obtained each game's attendance, so the previous statement only applies to earlier seasons). The process for gathering data on American Football was a little more tedious. Another API was used in Python that pulled data from another Github repo. This repo had data on NFL games and attendance in two different files. These files were then dowloaded and subsequently uploaded into a SQL database. The SQL file Hackathon_NFL_Query.sql was then used to join these two tables.
-The file Hackathon.ipynb has the code for the different API's and also is where the different sports datasets were eventually combined. 
+Data was used from sports-reference.com. It was obtained in several different ways. For hockey and soccer, data was taken directly from the website and cleaned in excel. For baseball and basketball, two different API's in python were used to gather the relevant data. Both of these API's leverage sports-reference.com, however note that the API for basketball only had average attendance for a given season, so generalizations were made to take the season averages to the individual game level (in our final dataset, for the 2020-2021 NBA season, we manually obtained each game's attendance, so the previous statement only applies to earlier seasons). The process for gathering data on American Football was a little more tedious. Another API was used in Python that pulled data from another Github repo. This repo had data on NFL games from 2000-2019 and attendance numbers in 2 different files. These files were then downloaded and subsequently uploaded into a SQL database. The SQL file Hackathon_NFL_Query.sql was then used to join these two tables. For 202 data (during COVID), the data was manually taken from sports-reference.com and joined in excel with the rest of the american football data. The file Hackathon.ipynb has the code for the different API's and also is where the different sports datasets were eventually combined. 
 
 ### COVID Vaccination Predictions
 Data for COVID vaccinations was pulled from https://github.com/owid/covid-19-data/tree/master/public/data/vaccinations. This data was originally sourced from the CDC. State population data was taken from https://www.infoplease.com/us/states/state-population-by-rank.
@@ -28,10 +27,10 @@ Data for COVID vaccinations was pulled from https://github.com/owid/covid-19-dat
 ## Programs Focused on Statistical Analysis
 
 ### Sports Attendance, 
-The file Hackathon.ipynb (same one where data was collected)is where the statistical tests were done. These statistical tests checked whether teams were fairing worse at their home venues during COVID in part due to the lack of fans. The data was saved in our rep to a file called csvData.csv.
+The file Hackathon.ipynb (same one where data was collected) is where the statistical tests were done for sports team performance. These statistical tests checked whether teams were fairing worse at their home venues during COVID in part due to the lack of fans. The data was saved in our repo to a file called csvData.csv.
 
 ### COVID Vaccination Predictions
-A python script called vaccination_prediction.ipynb used ARIMA to genrate predictions on COVID vaccinations for several states. We focused on states with NBA teams as this was emphasized in our presentation.
+A python script called vaccination_prediction.ipynb used ARIMA to genrate predictions on COVID vaccinations for several states. We focused on states with NBA teams as the NBA was the focus of our project.
 
 ## Reports
 
