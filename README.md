@@ -34,4 +34,4 @@ A python script called vaccination_prediction.ipynb used ARIMA to genrate predic
 
 ## Reports
 
-A Tableau file called Hackathon_Viz.twb contains several vizualizations for different sports and their performaces pre and during COVID.
+A Tableau file called Hackathon_Viz.twb contains several vizualizations for different sports and their performaces pre and during COVID. This program uses sports_data.csv as its data source.
